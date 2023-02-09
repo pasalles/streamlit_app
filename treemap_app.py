@@ -67,8 +67,8 @@ fig = px.treemap(df, path=['sector', 'industry', 'stock_code'], values='market_c
                   color_continuous_midpoint=0, range_color=[-3,3])
 
 fig.data[0].customdata = fig.data[0].marker.colors
-fig.data[0].texttemplate = "<b>%{label}</b><br>Market Cap: %{value:.0f} B<br>price_difference: %{customdata:.2f}%<br>"
-fig.update_traces(hovertemplate='%{label}<br>price_difference=%{customdata:.2f}%')
+fig.data[0].texttemplate = "<b>%{label}</b><br>Market Cap: %{value:.0f} B<br>change: %{customdata:.2f}%<br>"
+fig.update_traces(hovertemplate='%{label}<br>change=%{customdata:.2f}%')
 fig.update_traces(marker=dict(line=dict(width=1, color='#262931')))
 fig.update_layout({
     'plot_bgcolor': 'rgba(0,0,0,0)',

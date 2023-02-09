@@ -7,7 +7,7 @@ import streamlit as st
 
 # Bigquery connection
 credentials = service_account.Credentials.from_service_account_file(
-'C:/Users/filip/Documents/Python/service-account-file.json')
+'service-account-file.json')
 
 project_id = 'geometric-gamma-370017'
 client = bigquery.Client(credentials= credentials,project=project_id)

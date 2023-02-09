@@ -62,7 +62,7 @@ df = query_job.to_dataframe()
 
 # Create the Treemap chart
 fig = px.treemap(df, path=['sector', 'industry', 'stock_code'], values='market_cap',
-                  color='price_difference', hover_data=['price_difference'], 
+                  color='price_difference': 'change', hover_data=['price_difference'], 
                   color_continuous_scale=[(0, "#f63538"), (0.5, "#414554"), (1, "#30cc5a")],
                   color_continuous_midpoint=0, range_color=[-3,3])
 
@@ -76,4 +76,5 @@ fig.update_layout({
 })
 fig.update_layout(margin = dict(t=10, l=10, r=10, b=10), autosize=True, width=1000)
 
+st.title('Portfolio stock performance')
 st.plotly_chart(fig, use_container_width=True)

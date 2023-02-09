@@ -17,8 +17,8 @@ client = bigquery.Client(credentials= credentials,project=project_id)
 time_intervals = ['1 day', '1 week', '1 month']
 time_interval = '1 day'
 
-st.sidebar.header("Filters:")
-selected_time = st.sidebar.selectbox("Time interval:",
+
+selected_time = st.selectbox("Time interval:",
 options=time_intervals,
 index=time_intervals.index(time_interval)
 )

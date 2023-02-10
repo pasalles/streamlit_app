@@ -6,7 +6,7 @@ import streamlit as st
 
 
 # Bigquery connection
-credentials = service_account.Credentials.from_service_account_file(
+credentials = service_account.Credentials.from_service_account_info(
 st.secrets["gcp_service_account"])
 
 project_id = 'geometric-gamma-370017'
